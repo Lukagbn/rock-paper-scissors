@@ -1,5 +1,3 @@
-import "./Paper.sass";
-
 interface Selected {
   setSelected: (choice: string) => void;
 }
