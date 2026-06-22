@@ -1,13 +1,17 @@
 import "./Navbar.sass";
 
-function Navbar() {
+interface Score {
+  score: number;
+}
+
+function Navbar({ score }: Score) {
   return (
     <header className="header">
       <h1 className="visuallyHidden">rps</h1>
       <h2>rock paper scissors</h2>
       <div className="score">
         <p>
-          score <span>12</span>
+          score <span>{score}</span>
         </p>
       </div>
     </header>
