@@ -5,6 +5,7 @@ import "@fontsource/barlow-semi-condensed/600.css";
 import "@fontsource/barlow-semi-condensed/700.css";
 import GameSvgWrapper from "./components/gameSvg/GameSvgWrapper/GameSvgWrapper";
 import { useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [score, setScore] = useState<number | 0>(0);
@@ -14,6 +15,7 @@ function App() {
       <main>
         <GameSvgWrapper setScore={setScore} />
       </main>
+      <Footer />
     </div>
   );
 }
