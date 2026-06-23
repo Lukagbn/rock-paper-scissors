@@ -1,8 +1,8 @@
 import { useState } from "react";
+import "./GameSvgWrapper.sass";
 import Paper from "../Paper";
 import Rock from "../Rock";
 import Scissors from "../Scissors";
-import "./GameSvgWrapper.sass";
 
 interface GameProps {
   setScore: React.Dispatch<React.SetStateAction<number>>;

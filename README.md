@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# ✊✋✌️ Rock, Paper, Scissors
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and fully responsive Rock, Paper, Scissors game built with React 19, TypeScript, and Vite. This application features state-driven SVG components, customized typography, and a clean, maintainable project structure.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [[rock paper scissors game](https://rock-paper-scissors-nine-kohl.vercel.app/)]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧰 Tech Stack
 
-## React Compiler
+- **Framework:** React 19 + Vite
+- **Language:** TypeScript
+- **Styling:** SASS (`sass-embedded`)
+- **Typography:** Fontsource (Barlow Semi Condensed)
+- **Linting:** ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```json
+{
+  "next": "^16.1.6",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "framer-motion": "^11.x.x",
+  "canvas-confetti": "^1.x.x",
+  "lucide-react": "^0.x.x"
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+src/
+├── assets/
+│   ├── rules.png
+│   └── cross.svg
+├── components/
+│   ├── Footer/
+│   │   ├── Footer.tsx
+│   │   └── Footer.sass
+│   ├── Navbar/
+│   │   ├── Navbar.tsx
+│   │   └── Navbar.sass
+│   └── GameSvg/
+│       └── GameSvgWrapper/
+│           ├── GameSvgWrapper.tsx
+│           ├── GameSvgWrapper.sass
+│           ├── Paper.tsx
+│           ├── Rock.tsx
+│           ├── Scissors.tsx
+│           └── SvgStyle.sass
+├── App.css
+├── App.tsx
+├── index.css
+└── main.tsx
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+To get this project running locally on your machine:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Lukagbn/rock-paper-scissors.git
+
+# 2. Navigate into the directory
+cd rock-paper-scissors
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the Vite development server
+npm run dev
 ```
