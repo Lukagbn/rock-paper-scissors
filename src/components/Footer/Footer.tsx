@@ -9,14 +9,23 @@ function Footer() {
     <footer className="footer">
       <button onClick={() => setClicked(true)}>Rules</button>
       {clicked && (
-        <div className="rules">
-          <h4>RULES</h4>
-          <img className="rulesImg" src={rules} />
-          <img
-            className="cross"
-            src={cross}
-            onClick={() => setClicked(false)}
-          />
+        <div className="overlay" onClick={() => setClicked(false)}>
+          <div className="rules">
+            <div className="rulesHeader">
+              <h4>RULES</h4>
+              <img
+                className="crossLg"
+                src={cross}
+                onClick={() => setClicked(false)}
+              />
+            </div>
+            <img className="rulesImg" src={rules} />
+            <img
+              className="cross"
+              src={cross}
+              onClick={() => setClicked(false)}
+            />
+          </div>
         </div>
       )}
     </footer>
