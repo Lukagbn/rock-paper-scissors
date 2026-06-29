@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer">
       <button onClick={() => setClicked(true)}>Rules</button>
       {clicked && (
-        <div className="overlay" onClick={() => setClicked(false)}>
+        <div className="overlay">
           <div className="rules">
             <div className="rulesHeader">
               <h4>RULES</h4>
