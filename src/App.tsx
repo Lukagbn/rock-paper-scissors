@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar/Navbar";
 import "@fontsource/barlow-semi-condensed/400.css";
 import "@fontsource/barlow-semi-condensed/600.css";
 import "@fontsource/barlow-semi-condensed/700.css";
-import GameSvgWrapper from "./components/GameSvg/GameSvgWrapper/GameSvgWrapper";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
+import GameSvgWrapper from "./components/gameSvg/GameSvgWrapper/GameSvgWrapper";
 
 function App() {
   const [score, setScore] = useState<number | 0>(0);
